@@ -120,3 +120,54 @@ button{
     object-fit: cover;
     border-radius: 10px;
 }
+.bestbarbers{
+    /* width: auto; */
+    padding: 40px 20px;
+    /* background-color: blueviolet; */
+    /* height: 100vh; */
+
+}
+.bestmain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.bestheading{
+    font-size: 25px;
+    margin-top: 35px;
+    align-items: center;
+}
+.barphotos img{
+    height: 100pxpx;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.barphotos{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    /* flex-direction: column; */
+
+}
+.barberdetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+.footer{
+    padding: 20px 20px;
+    background-color: black;
+    color: aliceblue;
+}
+.footerdiv{
+    display: flex;
+    align-items: end;
+    gap: 70%;
+}
+.lastdiv{
+    display: flex;
+    justify-content: center;
+}
