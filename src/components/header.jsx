@@ -1,7 +1,7 @@
 
 function Header(){
    return(
-     <div className="header-div">
+     <div className="header-div ">
         <h1>UNISTYLE</h1>
         <div className="nav-links">
         <a href="">Home</a>

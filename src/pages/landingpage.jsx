@@ -1,13 +1,13 @@
-import image from './assets/book barber.png'
-import service1 from './assets/service1.jpeg'
-import service2 from './assets/service2.jpeg'
-import service3 from './assets/service3.jpg'
-import service4 from './assets/services4.jpeg'
-import service5 from './assets/service5.jpeg'
-import service6 from './assets/service6.jpeg'
-import barber1 from './assets/barberpoto.jpg'
-import barber2 from './assets/barber1.jpeg'
-import barber3 from './assets/barber2.jpeg'
+import image from '../assets/book barber.png'
+import service1 from '../assets/service1.jpeg'
+import service2 from '../assets/service2.jpeg'
+import service3 from '../assets/service3.jpg'
+import service4 from '../assets/services4.jpeg'
+import service5 from '../assets/service5.jpeg'
+import service6 from '../assets/service6.jpeg'
+import barber1 from '../assets/barberpoto.jpg'
+import barber2 from '../assets/barber1.jpeg'
+import barber3 from '../assets/barber2.jpeg'
 function Landing(){
     return(
         <>
