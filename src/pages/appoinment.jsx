@@ -10,6 +10,10 @@ import beard1 from '../assets/beard1.jpeg'
 import beard2 from '../assets/beard2.jpg'
 import beard3 from '../assets/beard3.jpg'
 import beard4 from '../assets/beard4.JPG'
+import straighting from '../assets/services4.jpeg'
+import curling from '../assets/curling.jpg'
+import coloring from '../assets/onecolor.jpg'
+import globalcolor from '../assets/global color.jpg'
 function Appoinment(){
     return(
         <>
@@ -207,7 +211,7 @@ function Appoinment(){
         <section className="h-auto  py-5 bg-white">
             <div className="text-center">
             <h2 className="text-4xl font-extrabold">Beard Grooming</h2>
-            <p className="text-gray-500">Choose the best facial treatment for your skin</p>
+            <p className="text-gray-500">Choose the best beard care service for a sharp and confident look</p>
            </div>
           {/* facial images */}
            <div className='border border-gray-200 rounded-xl px-4 py-12 w-auto h-80 shadow-sm mx-52 my-8 flex justify-between'>
@@ -301,50 +305,52 @@ function Appoinment(){
 
         <section className="h-auto  py-5 bg-white">
             <div className="text-center">
-            <h2 className="text-4xl font-extrabold">Beard Grooming</h2>
-            <p className="text-gray-500">Choose the best facial treatment for your skin</p>
+            <h2 className="text-4xl font-extrabold">Hair styling</h2>
+            <p className="text-gray-500">Choose the best hair design to match your style and occasion</p>
            </div>
-          {/* facial images */}
+          {/* hairstyling images */}
+
+
            <div className='border border-gray-200 rounded-xl px-4 py-12 w-auto h-80 shadow-sm mx-52 my-8 flex justify-between'>
             <div className="flex flex-col items-center ">
-            <img  className="rounded-2xl w-[180px] h-[220px] object-cover"src={beard1} alt='hair1'></img>
-            <p className=' mt-4 font-extrabold'>Basic beard trim</p>
+            <img  className="rounded-2xl w-[180px] h-[220px] object-cover"src={straighting} alt='hair1'></img>
+            <p className=' mt-4 font-extrabold'>Straightening</p>
             </div>
             <div className='flex flex-col items-center'>
-            <img className='rounded-2xl w-[180px] h-[220px] object-cover' src={beard2} alt='hair2'></img>
-            <p className='mt-4 font-extrabold'>Beard Styling</p>
+            <img className='rounded-2xl w-[180px] h-[220px] object-cover' src={curling} alt='hair2'></img>
+            <p className='mt-4 font-extrabold'>Hair curl</p>
             </div>
             <div className='flex flex-col items-center'>
-            <img className="rounded-2xl w-[180px] h-[220px] object-cover"src={beard3} alt="hair3" ></img>
-            <p className='mt-4 font-extrabold'>Beard+Moustache</p>
+            <img className="rounded-2xl w-[180px] h-[220px] object-cover"src={coloring} alt="hair3" ></img>
+            <p className='mt-4 font-extrabold'>Hair color</p>
             </div>
             <div className='flex flex-col items-center'>
-            <img  className="rounded-2xl w-[180px] h-[183px] object-cover"src={beard4} alt="hair4"></img> 
-            <p className='mt-4 font-extrabold'>Beard spa/care</p>
+            <img  className="rounded-2xl w-[180px] h-[183px] object-cover"src={globalcolor} alt="hair4"></img> 
+            <p className='mt-4 font-extrabold'>premium hair color</p>
             </div>
            </div>
-           {/* details of basic beard trim */}
+           {/* details of Straightening */}
            <div className=' px-20 py-12 w-auto h-auto  mx-52 my-8 grid grid-cols-2 gap-y-6'>
             <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
-                <h3 className='font-extrabold'>Basic beard trim</h3>
+                <h3 className='font-extrabold'>Straightening</h3>
                 <div className='flex text-center gap-2.5'>
-                <h2 className='font-extrabold  text-blue-500 '>₹199</h2>
-                <p className='text-gray-400 text-xs mt-1 '>15 min</p>
+                <h2 className='font-extrabold  text-blue-500 '>₹1499</h2>
+                <p className='text-gray-400 text-xs mt-1 '>90 min</p>
                 </div>
-                <p className='text-gray-400 text-xs font-sans font-bold'>Clean trim and basic shape</p>
+                <p className='text-gray-400 text-xs font-sans font-bold'>Temporary hair straightening for a smooth look</p>
                 <div className='flex justify-center mt-3.5 '>
                 <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
                 </div>
 
             </div>
-            {/* beard styling  */}
+            {/* curling styling  */}
             <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
-                <h3 className='font-extrabold'>Beard styling</h3>
+                <h3 className='font-extrabold'>Hair curl</h3>
                 <div className='flex text-center gap-2.5'>
-                <h2 className='font-extrabold  text-blue-500 '>₹249</h2>
-                <p className='text-gray-400 text-xs mt-1 '>20 min</p>
+                <h2 className='font-extrabold  text-blue-500 '>₹1249</h2>
+                <p className='text-gray-400 text-xs mt-1 '>75 min</p>
                 </div>
-                <p className='text-gray-400 text-xs font-sans font-bold'>Detailed shaping & sharp lineup</p>
+                <p className='text-gray-400 text-xs font-sans font-bold'>Temporary curls for parties & special events</p>
                 <div className='flex justify-center mt-3.5 '>
                 <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
                 </div>
@@ -352,12 +358,12 @@ function Appoinment(){
             </div>
             {/* beard+moustache */}
              <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
-                <h3 className='font-extrabold'>Beard+Moustache</h3>
+                <h3 className='font-extrabold'>Hair color</h3>
                 <div className='flex text-center gap-2.5'>
-                <h2 className='font-extrabold  text-blue-500 '>₹299</h2>
-                <p className='text-gray-400 text-xs mt-1 '>25 min</p>
+                <h2 className='font-extrabold  text-blue-500 '>₹999</h2>
+                <p className='text-gray-400 text-xs mt-1 '>60 min</p>
                 </div>
-                <p className='text-gray-400 text-xs font-sans font-bold'>Complete beard & moustache grooming</p>
+                <p className='text-gray-400 text-xs font-sans font-bold'>Single color application for the whole hair</p>
                 <div className='flex justify-center mt-3.5 '>
                 <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
                 </div>
@@ -365,12 +371,12 @@ function Appoinment(){
             </div>
             {/* beard spa*/}
              <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
-                <h3 className='font-extrabold'>Beard spa/care</h3>
+                <h3 className='font-extrabold'>Premium hair color</h3>
                 <div className='flex text-center gap-2.5'>
-                <h2 className='font-extrabold  text-blue-500 '>₹399</h2>
-                <p className='text-gray-400 text-xs mt-1 '>35 min</p>
+                <h2 className='font-extrabold  text-blue-500 '>₹1799</h2>
+                <p className='text-gray-400 text-xs mt-1 '>120 min</p>
                 </div>
-                <p className='text-gray-400 text-xs font-sans font-bold'>Beard wash, oil & nourishment</p>
+                <p className='text-gray-400 text-xs font-sans font-bold'>Global color or highlights with premium finish</p>
                 <div className='flex justify-center mt-3.5 '>
                 <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
                 </div>
