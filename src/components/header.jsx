@@ -1,8 +1,8 @@
-
+import logo from '../assets/org barberq.png'
 function Header(){
    return(
-     <div className="header-div ">
-        <h1>UNISTYLE</h1>
+     <div className="header-div mt-3.5">
+         <img  className ="max-w-20 " src={logo} alt="logo" />
         <div className="nav-links">
         <a href="">Home</a>
         <a href="">about us</a>
@@ -10,8 +10,8 @@ function Header(){
         <a href="">contact</a>
         </div>
         <div className="button-div">
-        <button>signUp</button>
-        <button>login</button>
+        <button className='font-bold '>signUp</button>
+        <button className='font-bold '>login</button>
         </div>
 
     </div>

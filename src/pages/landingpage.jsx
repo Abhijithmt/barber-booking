@@ -1,4 +1,4 @@
-import image from '../assets/book barber.png'
+import image from '../assets/biglogo.png'
 import service1 from '../assets/service1.jpeg'
 import service2 from '../assets/service2.jpeg'
 import service3 from '../assets/service3.jpg'
@@ -11,8 +11,8 @@ import barber3 from '../assets/barber2.jpeg'
 function Landing(){
     return(
         <>
-        <section className="landing-div">
-            <div className="tittle-div">
+        <section className="landing-div font-extrabold text-2xl">
+            <div className="tittle-div mt-10">
             <h1>LOOK GOOD,
                 <br></br>
                 FEEL CONFIDENT,
@@ -29,11 +29,11 @@ function Landing(){
                 <h1>About Us</h1>
             </div>
             <div className='sentence-div'>
-                <p>UNISTYLE is a modern grooming platform where personalized style meets professional precision.
+                <p>BARBERQ is a modern grooming platform where personalized style meets professional precision.
                 We connect customers with skilled professionals who understand individuality, precision, and confidence. Every service is designed to help you look sharp, feel comfortable, and express your unique style with ease.
                 Grooming is more than a service — it’s an experience. Our platform brings together experienced barbers and customers in a space where quality, hygiene, and attention to detail come first. From classic cuts to modern styles, we focus on delivering results that reflect your personality and lifestyle.
-                UNISTYLE was created to simplify grooming. We provide a reliable platform where customers can discover trusted barbers, book services effortlessly, and enjoy consistent quality. By combining modern technology with skilled craftsmanship, we make professional grooming accessible and stress-free.
-                UNISTYLE is designed for people who value confidence and comfort. We believe everyone deserves a style that fits them perfectly, and our goal is to make grooming easy, reliable, and personal. With a focus on quality service and customer satisfaction, we help you look your best every day.
+                BARBERQ was created to simplify grooming. We provide a reliable platform where customers can discover trusted barbers, book services effortlessly, and enjoy consistent quality. By combining modern technology with skilled craftsmanship, we make professional grooming accessible and stress-free.
+                BARBERQ is designed for people who value confidence and comfort. We believe everyone deserves a style that fits them perfectly, and our goal is to make grooming easy, reliable, and personal. With a focus on quality service and customer satisfaction, we help you look your best every day.
                 its not only styling a person ,the perfect styling give the person confident,personality,
                 Mainly our platform notfocus only on just barbers,we are offering the best preffesional barbers and beauticians .
                 </p>
