@@ -1,5 +1,5 @@
 
-export default function Login(){
+export default function Loginpage(){
     return(
         <section className="h-screen flex items-center justify-center p-6 bg-white">
         <div className="max-w-md border w-full rounded-2xl p-8 shadow-2xl">
@@ -23,7 +23,7 @@ export default function Login(){
                      placeholder="password"
                      className="border mt-1 border-gray-700 rounded-xl px-4 py-3 w-full"
                      ></input>
-                     <a className=" textxs text-blue-500 hover:underline"href="">forget password</a>
+                     <a className=" text-xs text-blue-500 hover:underline"href="">forget password</a>
                 </div>
                 <button 
                 type="submit"
@@ -31,8 +31,8 @@ export default function Login(){
                 >Login</button>
             </form>
             <div className="flex mt-2.5 justify-center gap-1">
-                <p>Already have an account?</p>
-                <a href="#" className="text-blue-500 ">sign in</a>
+                <p>Don't have an account?</p>
+                <a href="#" className="text-blue-500 hover:underline">sign up</a>
             </div>
         </div>           
         </section>
