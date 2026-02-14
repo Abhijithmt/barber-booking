@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Signup(){
     return(
     <section className="h-screen flex items-center justify-center bg-white">
@@ -36,7 +38,7 @@ export default function Signup(){
             </div>
             <div className="flex mt-6 justify-center gap-1.5  ">
             <p>Already have an account?</p>
-            <a href="#" className="text-sm text-blue-600 hover:underline">Login</a>
+            <Link to="/login" className="text-sm text-blue-600 hover:underline">Login</Link>
         </div>
         </div>
     
