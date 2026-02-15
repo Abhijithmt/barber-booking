@@ -24,7 +24,7 @@ function Landing(){
                     <img src={image} alt="" />
                 </div>
         </section>
-        <section className='aboutus-div'>
+        <section id='about' className='aboutus-div'>
             <div className='heading-div'>
                 <h1>About Us</h1>
             </div>
@@ -41,7 +41,7 @@ function Landing(){
             
 
         </section>
-        <section className='service-div'>
+        <section id='services' className='service-div'>
             <div className='serviceheading'>
                 <h1>Our Services</h1>
             </div>

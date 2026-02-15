@@ -5,10 +5,10 @@ function Header(){
      <div className="header-div mt-3.5 ">
          <img  className ="max-w-20 " src={logo} alt="logo" />
         <div className="nav-links">
-        <a href="">Home</a>
-        <a href="">about us</a>
-        <a href="">services</a>
-        <a href="">contact</a>
+        <Link to ="/">Home</Link>
+        <a href="#about">about us</a>
+        <a href="#services">services</a>
+        <Link to='/contact'>contact</Link>
         </div>
         <div className="button-div">
         <Link to="/register">

@@ -14,6 +14,9 @@ import straighting from '../assets/services4.jpeg'
 import curling from '../assets/curling.jpg'
 import coloring from '../assets/onecolor.jpg'
 import globalcolor from '../assets/global color.jpg'
+import barber1 from '../assets/barber1.jpeg'
+import barber2 from '../assets/barber2.jpeg'
+import barber3 from '../assets/barberpoto.jpg'
 function Appoinment(){
     return(
         <>
@@ -385,6 +388,44 @@ function Appoinment(){
 
            </div>
         </section>
+       
+        <section className='m-5'>
+  <div className='border border-gray-200 rounded-xl px-10 py-12 w-auto h-auto shadow-sm mx-52 my-8 '>
+    <h1 className='text-center text-3xl font-extrabold mb-8'>Choose Barber</h1>
+    
+    {/* Grid Container for Barbers */}
+    <div className='flex justify-between gap-6'>
+      
+      {/* Barber 1 */}
+      <div className='flex flex-col items-center gap-10'>
+        <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber1} alt="Barber 1" />
+        <p className="font-extrabold text-blue-500">Jack</p>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+          Select
+        </button>
+      </div>
+
+      {/* Barber 2 */}
+      <div className='flex flex-col items-center gap-10'>
+        <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber2} alt="Barber 2" />
+        <p className="font-extrabold text-blue-500">Thomas</p>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+          Select
+        </button>
+      </div>
+
+      {/* Barber 3 */}
+      <div className='flex flex-col items-center gap-10'>
+        <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber3} alt="Barber 3" />
+        <p className="font-extrabold text-blue-500">Edward</p>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+          Select
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
         </>
     )
 }
