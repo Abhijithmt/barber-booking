@@ -24,6 +24,7 @@ function App() {
     <Route path="/register" element={<Signup/>}/>
    </Routes>
    {!removeheaderfooter &&<Footer/>}
+   <Appoinment/>
    
   
    </>

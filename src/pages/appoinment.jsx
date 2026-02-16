@@ -426,6 +426,9 @@ function Appoinment(){
     </div>
   </div>
 </section>
+<div className='flex justify-center py-5 mb-5'>
+<button className='text-xl bg-center rounded-xl bg-black text-white font-extrabold hover:bg-gray-600 px-20 py-4 hover:border-yellow-50'>Confirm Booking</button>
+</div>
         </>
     )
 }
