@@ -17,10 +17,15 @@ import globalcolor from '../assets/global color.jpg'
 import barber1 from '../assets/barber1.jpeg'
 import barber2 from '../assets/barber2.jpeg'
 import barber3 from '../assets/barberpoto.jpg'
-import { useState } from 'react'
+import { useActionState, useState } from 'react'
 function Appoinment(){
 
-    const [selected,setSelected]=useState(null)
+    const [hair,SetHair]=useState(null)
+    const [facial,SetFacial]=useState(null)
+    const [beard,SetBeard]=useState(null)
+    const [style,SetStyle]=useState(null)
+    const [barber,SetBarber]=useState(null)
+    const [confirm,SetConfirm]=useState(null)
 
     return(
         <>
@@ -61,11 +66,11 @@ function Appoinment(){
                 <div className='flex justify-center mt-3.5 '>
                <button 
             
-                onClick={() => setSelected(selected==='basic' ? 'null':'basic')}
+                onClick={()=>SetHair(hair==='basic' ? 'null':'basic')}
                 
-                className={`${selected === 'basic' ? 'bg-blue-600' : 'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`}
+                className={`${hair === 'basic' ? 'bg-blue-600' : 'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`}
             >
-                {selected === 'basic' ? 'Selected' : 'select'}
+                {hair === 'basic' ? 'Selected' : 'select'}
             </button>
                 </div>
 
@@ -79,7 +84,13 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Fade, layer & modern looks</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button
+                onClick={()=> SetHair(hair==='Advanced' ? 'null':'Advanced')} 
+
+                className={`${hair==='Advanced'? 'bg-blue-600': 'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`}>
+
+                    {hair==='Advanced'? 'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -92,7 +103,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete styling & finish</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button 
+                onClick={ ()=> SetHair(hair==="premium" ? "null":"premium")}
+                
+                className={`${hair==="premium"? "bg-blue-600":'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'`} >
+                {hair==="premium"? 'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -105,7 +121,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Normal and Modern for kids</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button
+                onClick={()=> {SetHair(hair==="kids"? 'null' : 'kids')}}
+                
+                className={`${hair==='kids'?'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`}>
+                    {hair==='kids'? 'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -160,7 +181,11 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Normal skin cleaning & refreshing</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button 
+                onClick={()=>{SetFacial(facial==='basicfacial'? 'null':'basicfacial')}}
+                className={`${facial==='basicfacial'?'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+                    {facial=='basicfacial'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -173,7 +198,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Deep cleaning & glow treatment</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button 
+                onClick={()=>{SetFacial(facial=== "Advanced facial"? 'null':'Advanced facial')}}
+                className={`${facial==='Advanced facial'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {facial==='Advanced facial'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -186,11 +216,16 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete skin care with massage & mask</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button 
+                onClick={()=>{SetFacial(facial=== "premiumfacial"? 'null':'premiumfacial')}}
+                className={`${facial==='premiumfacial'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {facial==='premiumfacial'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
-            {/* kids */}
+            {/* skincare */}
              <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
                 <h3 className='font-extrabold'>skincare faical</h3>
                 <div className='flex text-center gap-2.5'>
@@ -199,7 +234,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Treatment for acne & oily skin</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button 
+                onClick={()=>{SetFacial(facial=== "skincare"? 'null':'skincare')}}
+                className={`${facial==='skincare'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {facial==='skincare'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -227,7 +267,7 @@ function Appoinment(){
             <h2 className="text-4xl font-extrabold">Beard Grooming</h2>
             <p className="text-gray-500">Choose the best beard care service for a sharp and confident look</p>
            </div>
-          {/* facial images */}
+          {/* beard images */}
            <div className='border border-gray-200 rounded-xl px-4 py-12 w-auto h-80 shadow-sm mx-52 my-8 flex justify-between'>
             <div className="flex flex-col items-center ">
             <img  className="rounded-2xl w-[180px] h-[220px] object-cover"src={beard1} alt='hair1'></img>
@@ -256,7 +296,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Clean trim and basic shape</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                <button 
+                onClick={()=>{SetBeard(beard=== "basicbeard"? 'null':'basicbeard')}}
+                className={`${beard==='basicbeard'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {beard==='basicbeard'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -269,8 +314,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Detailed shaping & sharp lineup</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
-                </div>
+                <button 
+                onClick={()=>{SetBeard(beard=== "beardstyling"? 'null':'beardstyling')}}
+                className={`${beard==='beardstyling'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {beard==='beardstyling'?'selected':'select'}
+                </button>                </div>
 
             </div>
             {/* beard+moustache */}
@@ -282,7 +331,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete beard & moustache grooming</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                  <button 
+                onClick={()=>{SetBeard(beard=== "b+m"? 'null':'b+m')}}
+                className={`${beard==='b+m'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {beard==='b+m'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
@@ -295,8 +349,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Beard wash, oil & nourishment</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
-                </div>
+                <button 
+                onClick={()=>{SetBeard(beard=== "beardspa"? 'null':'beardspa')}}
+                className={`${beard==='beardspa'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {beard==='beardspa'?'selected':'select'}
+                </button>                </div>
 
             </div>
 
@@ -353,8 +411,12 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Temporary hair straightening for a smooth look</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
-                </div>
+                <button 
+                onClick={()=>{SetStyle(style=== "straight"? 'null':'straight')}}
+                className={`${style==='straight'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {style==='straight'?'selected':'select'}
+                </button>                </div>
 
             </div>
             {/* curling styling  */}
@@ -366,11 +428,16 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Temporary curls for parties & special events</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
+                   <button 
+                onClick={()=>{SetStyle(style=== "haircurl"? 'null':'haircurl')}}
+                className={`${style==='haircurl'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {style==='haircurl'?'selected':'select'}
+                </button>
                 </div>
 
             </div>
-            {/* beard+moustache */}
+            {/* haircolor*/}
              <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
                 <h3 className='font-extrabold'>Hair color</h3>
                 <div className='flex text-center gap-2.5'>
@@ -379,11 +446,15 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Single color application for the whole hair</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
-                </div>
+                <button 
+                onClick={()=>{SetStyle(style=== "haircolor"? 'null':'haircolor')}}
+                className={`${style==='haircolor'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {style==='haircolor'?'selected':'select'}
+                </button>                </div>
 
             </div>
-            {/* beard spa*/}
+            {/* premiumcolor*/}
              <div className='rounded-2xl border px-2.5 py-2.5 shadow-sm w-2xs h-auto'>
                 <h3 className='font-extrabold'>Premium hair color</h3>
                 <div className='flex text-center gap-2.5'>
@@ -392,13 +463,27 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Global color or highlights with premium finish</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
-                </div>
+                <button 
+                onClick={()=>{SetStyle(style=== "premiumcolor"? 'null':'premiumcolor')}}
+                className={`${style==='premiumcolor'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {style==='premiumcolor'?'selected':'select'}
+                </button>                </div>
 
             </div>
 
            </div>
         </section>
+
+
+
+
+
+
+
+
+
+
 
 
         {/* selecting barbers section */}
@@ -414,34 +499,47 @@ function Appoinment(){
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber1} alt="Barber 1" />
         <p className="font-extrabold text-blue-500">Jack</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
-          Select
-        </button>
+           <button 
+                onClick={()=>{SetBarber(barber=== "barber1"? 'null':'barber1')}}
+                className={`${barber==='barber1'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {barber==='barber1'?'selected':'select'}
+                </button>
       </div>
 
       {/* Barber 2 */}
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber2} alt="Barber 2" />
         <p className="font-extrabold text-blue-500">Thomas</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
-          Select
-        </button>
+           <button 
+                onClick={()=>{SetBarber(barber=== "barber2"? 'null':'barber2')}}
+                className={`${barber==='barber2'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {barber==='barber2'?'selected':'select'}
+                </button>
       </div>
 
       {/* Barber 3 */}
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber3} alt="Barber 3" />
         <p className="font-extrabold text-blue-500">Edward</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
-          Select
-        </button>
+           <button 
+                onClick={()=>{SetBarber(barber=== "barber3"? 'null':'barber3')}}
+                className={`${barber==='barber3'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+
+                    {barber==='barber3'?'selected':'select'}
+                </button>
       </div>
 
     </div>
   </div>
 </section>
 <div className='flex justify-center py-5 mb-5'>
-<button className='text-xl bg-center rounded-xl bg-black text-white font-extrabold px-20 py-4 hover:border-yellow-50'>Confirm Booking</button>
+<button 
+onClick={()=> {SetConfirm('confirm')}}
+className={`${confirm==='confirm'?'bg-blue-600':'bg-black'} text-xl bg-center rounded-xl bg-black text-white font-extrabold px-20 py-4 hover:border-yellow-50`}>
+    {confirm==='confirm'? 'confirmed': 'confirm'}
+</button>
 </div>
         </>
     )
