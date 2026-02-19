@@ -17,7 +17,11 @@ import globalcolor from '../assets/global color.jpg'
 import barber1 from '../assets/barber1.jpeg'
 import barber2 from '../assets/barber2.jpeg'
 import barber3 from '../assets/barberpoto.jpg'
+import { useState } from 'react'
 function Appoinment(){
+
+    const [selected,setSelected]=useState(null)
+
     return(
         <>
         <section className="h-auto  py-5 bg-white">
@@ -55,7 +59,14 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Regular office / casual style</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+               <button 
+            
+                onClick={() => setSelected(selected==='basic' ? 'null':'basic')}
+                
+                className={`${selected === 'basic' ? 'bg-blue-600' : 'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`}
+            >
+                {selected === 'basic' ? 'Selected' : 'select'}
+            </button>
                 </div>
 
             </div>
@@ -81,7 +92,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete styling & finish</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -94,7 +105,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Normal and Modern for kids</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -149,7 +160,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Normal skin cleaning & refreshing</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -175,7 +186,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete skin care with massage & mask</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -188,7 +199,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Treatment for acne & oily skin</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -245,7 +256,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Clean trim and basic shape</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -258,7 +269,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Detailed shaping & sharp lineup</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -271,7 +282,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Complete beard & moustache grooming</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -284,7 +295,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Beard wash, oil & nourishment</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -342,7 +353,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Temporary hair straightening for a smooth look</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -355,7 +366,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Temporary curls for parties & special events</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -368,7 +379,7 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Single color application for the whole hair</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
@@ -381,13 +392,16 @@ function Appoinment(){
                 </div>
                 <p className='text-gray-400 text-xs font-sans font-bold'>Global color or highlights with premium finish</p>
                 <div className='flex justify-center mt-3.5 '>
-                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center hover:bg-blue-600 font-sans font-medium'>select</button>
+                <button className='bg-black text-white px-16 py-1 rounded-2xl text-center font-sans font-medium'>select</button>
                 </div>
 
             </div>
 
            </div>
         </section>
+
+
+        {/* selecting barbers section */}
        
         <section className='m-5'>
   <div className='border border-gray-200 rounded-xl px-10 py-12 w-auto h-auto shadow-sm mx-52 my-8 '>
@@ -400,7 +414,7 @@ function Appoinment(){
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber1} alt="Barber 1" />
         <p className="font-extrabold text-blue-500">Jack</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
           Select
         </button>
       </div>
@@ -409,7 +423,7 @@ function Appoinment(){
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber2} alt="Barber 2" />
         <p className="font-extrabold text-blue-500">Thomas</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
           Select
         </button>
       </div>
@@ -418,7 +432,7 @@ function Appoinment(){
       <div className='flex flex-col items-center gap-10'>
         <img className="rounded-2xl w-[180px] h-[183px] object-cover" src={barber3} alt="Barber 3" />
         <p className="font-extrabold text-blue-500">Edward</p>
-        <button className='bg-black text-white px-10 py-2 rounded-2xl hover:bg-blue-600 transition-colors font-sans font-medium w-full'>
+        <button className='bg-black text-white px-10 py-2 rounded-2xl transition-colors font-sans font-medium w-full'>
           Select
         </button>
       </div>
@@ -427,7 +441,7 @@ function Appoinment(){
   </div>
 </section>
 <div className='flex justify-center py-5 mb-5'>
-<button className='text-xl bg-center rounded-xl bg-black text-white font-extrabold hover:bg-gray-600 px-20 py-4 hover:border-yellow-50'>Confirm Booking</button>
+<button className='text-xl bg-center rounded-xl bg-black text-white font-extrabold px-20 py-4 hover:border-yellow-50'>Confirm Booking</button>
 </div>
         </>
     )
