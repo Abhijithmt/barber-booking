@@ -20,12 +20,48 @@ import barber3 from '../assets/barberpoto.jpg'
 import { useActionState, useState } from 'react'
 function Appoinment(){
 
-    const [hair,SetHair]=useState(null)
+
+
+      const [hair,SetHair]=useState(null)
     const [facial,SetFacial]=useState(null)
     const [beard,SetBeard]=useState(null)
     const [style,SetStyle]=useState(null)
     const [barber,SetBarber]=useState(null)
     const [confirm,SetConfirm]=useState(null)
+
+
+
+
+    const price ={
+        //haircut
+        basic:299,
+        Advance:399,
+        premium:499,
+        kids:199,
+        //facial
+        basicfacial:499,
+        Advancefacial:699,
+        premiumfacial:999,
+        skincare:899,
+        //beard
+        basicbeard:199,
+        beardstyle:249,
+        "b+m":299,
+        beardspa:399,
+        //hairstyling
+        straight:1499,
+        haircurl:1249,
+        haircolor:999,
+        premiumcolor:1799
+
+    }
+    const totalprice=(price[hair] || 0)+
+    (price[facial] || 0)+
+    (price[beard] || 0)+
+    (price[style] || 0);
+    console.log("Current Total:", totalprice, "Hair state:", hair);
+
+  
 
     return(
         <>
@@ -199,10 +235,10 @@ function Appoinment(){
                 <p className='text-gray-400 text-xs font-sans font-bold'>Deep cleaning & glow treatment</p>
                 <div className='flex justify-center mt-3.5 '>
                 <button 
-                onClick={()=>{SetFacial(facial=== "Advanced facial"? 'null':'Advanced facial')}}
-                className={`${facial==='Advanced facial'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
+                onClick={()=>{SetFacial(facial=== "Advancedfacial"? 'null':'Advancedfacial')}}
+                className={`${facial==='Advancedfacial'? 'bg-blue-600':'bg-black'} text-white px-16 py-1 rounded-2xl text-center font-sans font-medium`} >
 
-                    {facial==='Advanced facial'?'selected':'select'}
+                    {facial==='Advancedfacial'?'selected':'select'}
                 </button>
                 </div>
 
@@ -534,6 +570,12 @@ function Appoinment(){
     </div>
   </div>
 </section>
+<div>
+    <div className='text-center'>
+        <p className="text-gray-400 font-bold uppercase text-sm">Amount To Pay In Shop</p>
+        <h2 className='text-xl font-extrabold'>₹{totalprice}</h2>
+    </div>
+</div>
 <div className='flex justify-center py-5 mb-5'>
 <button 
 onClick={()=> {SetConfirm('confirm')}}
