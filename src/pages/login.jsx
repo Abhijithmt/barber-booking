@@ -25,7 +25,7 @@ export default function Loginpage(){
                      placeholder="password"
                      className="border mt-1 border-gray-300 rounded-xl px-4 py-3 w-full text-white"
                      ></input>
-                     <a className=" text-xs text-blue-500 hover:underline"href="">forget password</a>
+                     <Link to='/forget-password'><a className=" text-xs text-blue-500 hover:underline"href="">forget password</a></Link>
                 </div>
                 <button 
                 type="submit"
