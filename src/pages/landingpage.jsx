@@ -8,7 +8,18 @@ import service6 from '../assets/service6.jpeg'
 import barber1 from '../assets/barberpoto.jpg'
 import barber2 from '../assets/barber1.jpeg'
 import barber3 from '../assets/barber2.jpeg'
+import {useNavigate} from 'react-router-dom'
 function Landing(){
+    const navigate = useNavigate()
+    const Isloggin=(false)
+
+    const checkcondition=()=>{
+        if(Isloggin){
+            navigate('/booking-page')
+        }else{
+            navigate('/login')
+        }
+    }
     return(
         <>
         <section className="landing-div font-extrabold text-2xl">
@@ -18,7 +29,9 @@ function Landing(){
                 FEEL CONFIDENT,
                 <br></br>
                 BOOK YOUR FAVORITE BARBER AND STYLE</h1>
-                <button>BOOK NOW<span> &gt;</span></button>
+                
+                <button
+                 onClick={checkcondition}>BOOK NOW<span> &gt;</span></button>
                 </div>
                 <div className="logo-div">
                     <img src={image} alt="" />
