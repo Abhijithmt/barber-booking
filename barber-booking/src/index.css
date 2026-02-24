@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+/* body {
+  background-color: rgb(255, 255, 255);
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  border: 3px solid rgba(0, 0, 0, 0.703);
+  margin: 20px 20px;
+  color: rgb(75, 22, 22);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: rgb(75, 22, 22);
+}
+
+.nav-links a {
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+}
+
+.button-div {
+  display: flex;
+  gap: 20px;
+}
+
+.button-div button {
+  padding: 7px 25px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.644);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(75, 22, 22);
+  color: aliceblue;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  margin: 0px 20px;
+  background-color: rgba(110, 46, 46, 0.95);
+  color: aliceblue;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.landing-div {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.landing-div img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  padding: 20px 20px;
+}
+
+.landing-div h1 {
+  font-size: 60px;
+  font-family: sans-serif;
+  color: rgb(75, 22, 22);
+}
+
+.landing-div button {
+  padding: 10px 15px;
+  font-size: 25px;
+  border: none;
+  background-color: rgb(107, 46, 46);
+  color: aliceblue;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.aboutus-div {
+  padding: 5px 20px;
+  height: 100vh;
+}
+
+.heading-div {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: monospace;
+  color: rgba(135, 57, 57, 0.954);
+}
+
+.sentence-div {
+  padding: 30px 50px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(123, 44, 44, 0.95);
+}
+
+.serviceheading {
+  color: rgba(136, 45, 45, 0.904);
+}
+
+.service-div {
+  padding: 20px 20px;
+}
+
+.service-div img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.serviceimges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.service-div h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.barbers-div {
+  padding: 20px 20px;
+  text-align: center;
+  height: 100vh;
+}
+
+.barbertittle {
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+  color: rgba(135, 50, 50, 0.977);
+}
+
+.bigcard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+.card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid rgba(87, 86, 86, 0.637);
+  padding: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(86, 86, 86, 0.479);
+}
+
+.card h2 {
+  font-family: monospace;
+  color: rgba(136, 50, 50, 0.932);
+}
+
+.card p {
+  font-family: monospace;
+  color: rgba(128, 128, 128, 0.954);
+}
+*/
