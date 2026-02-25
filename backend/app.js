@@ -5,7 +5,7 @@ const port = 3000
 require('dotenv').config()
 
 app.get('/', (req,res)=>{
-    res.send(`server is running in browser`)
+    res.send('barber-booking website')
 } )
 
 app.listen(port,()=>{
