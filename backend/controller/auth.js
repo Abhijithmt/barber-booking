@@ -33,3 +33,21 @@ exports.register =async (req,res)=>{
 
     }
 }
+
+
+
+
+
+
+
+exports.login = async (req,res)=>{
+    const {name,password}=req.body
+
+
+    const loginuser = await User.findOne({email:email})
+    if(!loginuser){
+        res.status(400).json({messege:'user not found'})
+    }
+
+
+}
