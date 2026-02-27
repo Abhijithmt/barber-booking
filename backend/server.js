@@ -1,11 +1,13 @@
 const express =require('express')
 const mongooose=require('mongoose')
 const app=express()
+const cors=require('cors')
 const port=5000
 require('dotenv').config()
 
 
 //middleware for req.body,or it will undefined
+app.use(cors())
 app.use(express.json())
 
 
