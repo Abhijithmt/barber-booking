@@ -26,8 +26,6 @@ export default function Signup(){
 
 
 
-
-
     return(
     <section className="h-screen flex items-center justify-center bg-white">
         <div className="max-w-md border w-full rounded-2xl p-8 shadow-2xl">
