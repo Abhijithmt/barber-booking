@@ -1,5 +1,6 @@
 const User=require('../model/user')
 const bcrypt=require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 exports.register =async (req,res)=>{
     try{
@@ -41,13 +42,27 @@ exports.register =async (req,res)=>{
 
 
 exports.login = async (req,res)=>{
-    const {name,password}=req.body
+    const {email,password}=req.body
 
 
     const loginuser = await User.findOne({email:email})
     if(!loginuser){
-        res.status(400).json({messege:'user not found'})
+        return res.status(400).json({messege:'user not found'})
     }
+
+    const ismatch= await bcrypt.compare(password,loginuser.password)
+    if(!ismatch){
+        return res.status(401).json({messege:'incorrect password'})
+    }
+
+    //create jwt token
+
+    const token=jwt.sign(
+        {userId:loginuser.id,email:loginuser.email},
+        process.env.jwttoken,
+        {expiresIn:process.env.jwt_expires}
+    )
+    return res.status(200).json({token})
 
 
 }

@@ -14,7 +14,7 @@ app.use(express.json())
 
 
 // importing router
-const userrouter=require('./router/user')
+const userrouter=require('./router/auth')
 
 
 
