@@ -47,12 +47,12 @@ exports.login = async (req,res)=>{
 
     const loginuser = await User.findOne({email:email})
     if(!loginuser){
-        return res.status(400).json({messege:'user not found'})
+        return res.status(400).json({message:'user not found'})
     }
 
     const ismatch= await bcrypt.compare(password,loginuser.password)
     if(!ismatch){
-        return res.status(401).json({messege:'incorrect password'})
+        return res.status(401).json({message:'incorrect password'})
     }
 
     //create jwt token
@@ -62,7 +62,7 @@ exports.login = async (req,res)=>{
         process.env.jwttoken,
         {expiresIn:process.env.jwt_expires}
     )
-    return res.status(200).json({token})
+    return res.status(200).json({message:"login successfull",token})
 
 
 }

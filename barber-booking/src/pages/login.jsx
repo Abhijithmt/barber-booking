@@ -1,7 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import backgroundimg from '../assets/background.jpg'
+import { useState } from "react";
+import axios from "axios";
 
 export default function Loginpage(){
+
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
+    const [error,setError]=useState('')
+    const navigate=useNavigate()
+
+
+
+    const handlelogin = async (e)=>{
+        e.preventDefault()
+
+        try {
+            const response =await axios.post('http://localhost:5000/auth/login',{email,password})
+            alert(response.data.message)
+            navigate('/')
+        } catch (error) {
+            setError(error.response.data.message)
+
+            
+        }
+
+    }
     return(
         <section className="h-screen flex items-center justify-center p-6 bg-white bg-cover" style={{ backgroundImage: `url(${backgroundimg})` }}>
         <div className="max-w-md border-white w-full rounded-2xl p-8 shadow-2xl">
@@ -9,12 +33,17 @@ export default function Loginpage(){
                 <h1 className="text-6xl font-extrabold text-white" >Login</h1>
                 <p className="text-gray-300 mt-2">please enter your details to login</p>
             </div>
-            <form>
+            {/* error showin */}
+            {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
+
+            <form onSubmit={handlelogin}>
                 <div className="mt-2">
                     <label className=" block text-sm text-gray-300 font-bold mb-1">Username or Email</label>
                     <input 
                     type="text"
                      placeholder="e.g abhijith_123"
+                     value={email}
+                     onChange={(e)=> setEmail(e.target.value)}
                      className="border mt-1 border-gray-300 rounded-xl px-4 py-3 w-full text-white"
                      ></input>
                 </div>
@@ -23,9 +52,14 @@ export default function Loginpage(){
                     <input 
                      type="password"
                      placeholder="password"
+                     value={password}
+                     onChange={(e)=> setPassword(e.target.value)}
                      className="border mt-1 border-gray-300 rounded-xl px-4 py-3 w-full text-white"
                      ></input>
-                     <Link to='/forget-password'><a className=" text-xs text-blue-500 hover:underline"href="">forget password</a></Link>
+                     <Link to='/forget-password'
+                     className=" text-xs text-blue-500 hover:underline"
+                     >
+                        forget password</Link>
                 </div>
                 <button 
                 type="submit"
