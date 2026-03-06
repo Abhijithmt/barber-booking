@@ -31,6 +31,7 @@ function Appoinment(){
 
 
 
+    
 
     const price ={
         //haircut
