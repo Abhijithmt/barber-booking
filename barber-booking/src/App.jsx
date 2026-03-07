@@ -6,6 +6,7 @@ import Loginpage from "./pages/login"
 import Signup from "./pages/signup"
 import {Routes,Route,useLocation}from 'react-router-dom'
 import Forget from "./pages/forgetpassword"
+import Dashboard from "./pages/dashboard"
 function App() {
   const location = useLocation()
 
@@ -28,6 +29,7 @@ function App() {
 
    </Routes>
    {!removeheaderfooter &&<Footer/>}
+   <Dashboard/>
    
    
    
