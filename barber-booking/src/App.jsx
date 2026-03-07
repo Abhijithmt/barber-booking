@@ -12,7 +12,8 @@ function App() {
 
 
   //checking with the pathlaction by includes
-   const removeheaderfooter=location.pathname === "/login" || location.pathname ==="/register" ||location.pathname==='/booking-page'  || location.pathname ==='/forget-password'
+   const removeheaderfooter=location.pathname === "/login" || location.pathname ==="/register" ||location.pathname==='/booking-page'  || location.pathname ==='/forget-password' ||
+   location.pathname ==='/dashboard'
 
 
 
@@ -26,10 +27,10 @@ function App() {
     <Route path="/register" element={<Signup/>}/>
     <Route path="/booking-page"element={<Appoinment/>}/>
     <Route path="/forget-password" element={<Forget/>}/>
+    <Route path="/dashboard"element={<Dashboard/>}/>
 
    </Routes>
    {!removeheaderfooter &&<Footer/>}
-   <Dashboard/>
    
    
    
