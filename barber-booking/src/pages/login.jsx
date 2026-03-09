@@ -17,8 +17,17 @@ export default function Loginpage(){
 
         try {
             const response =await axios.post('http://localhost:5000/auth/login',{email,password})
+            //  save token
+            localStorage.setItem('token',response.data.token)
+            //  save username
+            localStorage.setItem('userName',response.data.userName || "user" )
             alert(response.data.message)
+
+
             navigate('/dashboard')
+
+
+            window.location.reload()
         } catch (error) {
             setError(error.response.data.message)
 
