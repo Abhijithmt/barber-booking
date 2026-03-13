@@ -11,7 +11,6 @@ export default function Loginpage(){
     const navigate=useNavigate()
 
 
-
     const handlelogin = async (e)=>{
         e.preventDefault()
 
@@ -20,7 +19,7 @@ export default function Loginpage(){
             //  save token
             localStorage.setItem('token',response.data.token)
             //  save username
-            localStorage.setItem('userName',response.data.userName || "user" )
+            localStorage.setItem('email', email )
             alert(response.data.message)
 
 
