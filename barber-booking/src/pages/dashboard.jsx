@@ -20,9 +20,11 @@ export default function Dashboard(){
 
 
     return(
-        <div className="bg-black min-h-screen px-6 py-10">
+        <div className=" min-h-screen py-10">
+            <div className="border px-6 py-3 bg-black">
         <div >
-            <h1 className="text-6xl text-blue-600 font-bold">Welcome to BarberQ  !<span className="text-amber-100 gap-4 flex">{username}</span></h1>
+            <h1 className="text-6xl text-blue-600 font-bold">Welcome to BarberQ  !<span className="text-amber-200
+             gap-4 flex">{username}</span></h1>
             </div>
             <div className=" py-2">
             <p className="text-gray-600 font-bold">You have no booking now yet! </p>
@@ -33,7 +35,7 @@ export default function Dashboard(){
     <ArrowRight size={18}  strokeWidth={3}/>
   </button></Link>
 </div>
-       
+       </div>
         </div>
     )
 }
