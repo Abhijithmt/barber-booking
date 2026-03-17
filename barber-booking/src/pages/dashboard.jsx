@@ -20,7 +20,7 @@ export default function Dashboard(){
 
 
     return(
-        <div className=" min-h-screen py-10">
+        <div className=" min-h-screen ">
             <div className="border px-6 py-3 bg-black">
         <div >
             <h1 className="text-6xl text-blue-600 font-bold">Welcome to BarberQ  !<span className="text-amber-200
@@ -35,6 +35,8 @@ export default function Dashboard(){
     <ArrowRight size={18}  strokeWidth={3}/>
   </button></Link>
 </div>
+
+    
        </div>
         </div>
     )

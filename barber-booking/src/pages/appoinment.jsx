@@ -22,14 +22,37 @@ function Appoinment(){
 
 
 
-      const [hair,SetHair]=useState(null)
+    const [hair,SetHair]=useState(null)
     const [facial,SetFacial]=useState(null)
     const [beard,SetBeard]=useState(null)
     const [style,SetStyle]=useState(null)
     const [barber,SetBarber]=useState(null)
     const [confirm,SetConfirm]=useState(null)
 
+    const time={
+        // haircut
+        basic:30,
+        Advance:40,
+        premium:50,
+        kids:20,
+        // facial
+        basicfacial:30,
+        Advancefacial:45,
+        premiumfacial:60,
+        skincare:50,
+        // beard
+        basicbeard:15,
+        beardstyle:20,
+        "b+m":25,
+        beardspa:35,
+        // styling
+        straight:90,
+        haircurl:75,
+        haircolor:60,
+        premiumcolor:120
 
+
+    }
 
     
 
@@ -56,13 +79,19 @@ function Appoinment(){
         premiumcolor:1799
 
     }
+    
+
+
     const totalprice=(price[hair] || 0)+
     (price[facial] || 0)+
     (price[beard] || 0)+
     (price[style] || 0);
-    console.log("Current Total:", totalprice, "Hair state:", hair);
+    // console.log("Current Total:", totalprice, "Hair state:", hair);
 
-  
+  const totaltime=(time[hair]|| 0)+
+  (time[facial]  || 0)+
+  (time[beard] || 0)+
+  (time[style] || 0);
 
     return(
         <>
@@ -576,6 +605,10 @@ function Appoinment(){
         <p className="text-gray-400 font-bold uppercase text-sm">Amount To Pay In Shop</p>
         <h2 className='text-xl font-extrabold'>₹{totalprice}</h2>
     </div>
+</div>
+<div className='text-center'>
+     <p className="text-gray-400 font-bold uppercase text-sm">Total Time For Grooming</p>
+        <h2 className='text-xl font-extrabold'>{totaltime} minutes</h2>
 </div>
 <div className='flex justify-center py-5 mb-5'>
 <button 
