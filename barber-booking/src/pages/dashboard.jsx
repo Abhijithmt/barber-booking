@@ -21,7 +21,7 @@ export default function Dashboard(){
 
     return(
         <div className=" min-h-screen ">
-            <div className="border px-6 py-3 bg-black">
+            <div className=" px-6 py-3 ">
         <div >
             <h1 className="text-6xl text-blue-600 font-bold">Welcome to BarberQ  !<span className="text-amber-200
              gap-4 flex">{username}</span></h1>

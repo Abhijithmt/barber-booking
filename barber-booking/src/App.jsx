@@ -12,8 +12,7 @@ function App() {
 
 
   //checking with the pathlaction by includes
-   const removeheaderfooter=location.pathname === "/login" || location.pathname ==="/register" ||location.pathname==='/booking-page'  || location.pathname ==='/forget-password' ||
-   location.pathname ==='/dashboard'
+   const removeheaderfooter=location.pathname === "/login" || location.pathname ==="/register" ||location.pathname==='/booking-page'  || location.pathname ==='/forget-password' 
 
 
 

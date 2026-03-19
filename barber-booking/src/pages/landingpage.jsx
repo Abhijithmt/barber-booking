@@ -37,7 +37,7 @@ function Landing(){
                     <img  className ="w-full h-auto max-w-2xl p-5"src={image} alt="" />
                 </div>
         </section>
-        <section id='about' className='py-1.5 px-5 h-auto'>
+        <section id='about' className='py-1.5 px-5 min-h-screen scroll-mt-20'>
             <div className='flex justify-center text-5xl font-mono text-amber-900'>
                 <h1>About Us</h1>
             </div>
