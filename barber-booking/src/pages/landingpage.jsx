@@ -99,7 +99,7 @@ function Landing(){
       />
       <div className="py-4">
         <h2 className="font-mono text-[#883232ed] text-2xl font-bold">JACK</h2>
-        <h2 className="font-mono text-[#883232ed] text-2xl font-bold">JACK</h2>
+        {/* <h2 className="font-mono text-[#883232ed] text-2xl font-bold">JACK</h2> */}
         <p className="font-mono text-gray-500">professional in styling</p>
       </div>
     </div>
